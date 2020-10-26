@@ -2,6 +2,7 @@ import app from 'firebase/app';
 import 'firebase/auth';
 // import 'firebase/firestore';
 import 'firebase/database';
+import 'firebase/storage';
 
 const config = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -18,6 +19,7 @@ class Firebase {
     this.auth = app.auth();
     // this.db = app.firestore();
     this.db = app.database();
+    this.storage = app.storage();
   }
 
   // Auth API
@@ -38,5 +40,8 @@ class Firebase {
   // user = (uid) => this.db.collection('users'); //cloud firestore
   user = (uid) => this.db.ref(`users/${uid}`);
   users = () => this.db.ref('users');
+
+  //***Storage API */
+  doUploadFile = (file) => this.storage.ref('images').put(file);
 }
 export default Firebase;
