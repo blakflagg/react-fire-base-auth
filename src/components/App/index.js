@@ -9,6 +9,7 @@ import PasswordForgetPage from '../PasswordForget';
 import HomePage from '../Home';
 import AccountPage from '../Account';
 import AdminPage from '../Admin';
+import PhotoPage from '../Photo';
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
 
@@ -18,6 +19,7 @@ const App = () => (
       <Navigation />
       <hr />
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
+      <Route path={ROUTES.PHOTO} component={PhotoPage} />
       <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
       <Route path={ROUTES.SIGN_IN} component={SignInPage} />
       <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />

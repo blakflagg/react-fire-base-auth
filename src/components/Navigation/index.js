@@ -18,6 +18,9 @@ const NavigationAuth = () => (
   <div>
     <ul>
       <li>
+        <Link to={ROUTES.PHOTO}>Photo</Link>
+      </li>
+      <li>
         <Link to={ROUTES.SIGN_IN}>Sign In</Link>
       </li>
       <li>
